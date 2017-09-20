@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Delete Student by NPM</title>
+</head>
+
+<body>
+	<p th:if=" ${status.equals('tidak ditemukan')} " th:text="'NPM ' + ${status}">NPM tidak ditemukan</p>
+	<p th:if=" ${status.equals('kosong')}" th:text="'NPM ' + ${status}">NPM kosong</p>
+	<h3 th:if=" ${status.equals('dihapus')}" th:text="'NPM ' + ${npm} + ' berhasil dihapus'">NPM berhasil dihapus</h3>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>View Student by NPM</title>
+</head>
+
+<body>
+	<p th:if=" ${student.equals('tidak ditemukan')} " th:text="'NPM ' + ${student}">NPM tidak ditemukan</p>
+	<p th:if=" ${student.equals('kosong')}" th:text="'NPM ' + ${student}">NPM kosong</p>
+	
+	<div th:if=" ${!student.equals('tidak ditemukan')} ">
+		<div th:if=" ${!student.equals('kosong')} ">
+			<h3 th:text="'NPM = ' + ${student.npm} ">Student NPM</h3>
+			<h3 th:text="'Name = ' + ${student.name} ">Student Name</h3>
+			<h3 th:text="'GPA = ' + ${student.gpa} ">Student GPA</h3>
+		</div>
+	</div>
+</body>
+</html>
